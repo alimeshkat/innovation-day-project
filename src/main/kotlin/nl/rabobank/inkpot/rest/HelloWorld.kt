@@ -11,7 +11,6 @@ class HelloWorld(val paymentRepository: PaymentRepository) {
     @GetMapping("/hello")
     suspend fun greeting(): String {
         println(Thread.currentThread().name)
-        paymentRepository.save()
         delay(1000)
         println(Thread.currentThread().name)
         return "hello"
