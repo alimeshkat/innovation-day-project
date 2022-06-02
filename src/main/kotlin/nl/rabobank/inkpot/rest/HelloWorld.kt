@@ -13,7 +13,6 @@ class HelloWorld(val paymentRepository: PaymentRepository) {
     suspend fun greeting(): String {
         println(Thread.currentThread().name)
         paymentRepository.save(Payment(null, "myiban", "yourIban", "baas", "10000", System.currentTimeMillis()))
-        paymentRepository.getHigherThan(1)
         delay(1000)
         println(Thread.currentThread().name)
         return "hello"

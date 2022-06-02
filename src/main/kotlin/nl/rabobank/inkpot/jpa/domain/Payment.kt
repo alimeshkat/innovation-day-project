@@ -6,8 +6,8 @@ import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 
 
-@Table(name = "payment")
-class Payment(
+@Table(name = "PAYMENT")
+data class Payment(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int?,
