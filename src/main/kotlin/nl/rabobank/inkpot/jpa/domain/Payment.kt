@@ -1,13 +1,11 @@
 package nl.rabobank.inkpot.jpa.domain
 
-import java.util.Date
-import javax.persistence.Entity
+import org.springframework.data.annotation.Id
+import org.springframework.data.relational.core.mapping.Table
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
-import javax.persistence.Id
-import javax.persistence.Table
 
-@Entity
+
 @Table(name = "payment")
 class Payment(
     @Id
