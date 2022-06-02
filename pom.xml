@@ -24,6 +24,7 @@
         <junit-jupiter-engine.version>5.6.0</junit-jupiter-engine.version>
         <spring-boot-starter-webflux.version>2.7.0</spring-boot-starter-webflux.version>
         <r2dbc-h2.version>0.9.1.RELEASE</r2dbc-h2.version>
+        <spring-data-r2dbc.version>1.5.0</spring-data-r2dbc.version>
     </properties>
 
     <build>
@@ -50,6 +51,19 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <compilerPlugins>
+                        <plugin>all-open</plugin>
+                        <plugin>spring</plugin>
+                    </compilerPlugins>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.jetbrains.kotlin</groupId>
+                        <artifactId>kotlin-maven-allopen</artifactId>
+                        <version>${kotlin.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -63,6 +77,18 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-couchbase</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-kotlin</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-test-junit5</artifactId>
@@ -97,6 +123,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
             <version>${spring-boot-starter-webflux.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-r2dbc</artifactId>
+            <version>${spring-data-r2dbc.version}</version>
         </dependency>
         <dependency>
             <groupId>io.r2dbc</groupId>
