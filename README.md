@@ -12,3 +12,4 @@ What to make:
 - Use spring cloud config server
 - Add a rest client to call another service (Ktor client)
 - Add a Kafka producer/consumer
+- Serverless 
