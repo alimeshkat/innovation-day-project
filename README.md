@@ -13,3 +13,8 @@ What to make:
 - Add a rest client to call another service (Ktor client)
 - Add a Kafka producer/consumer
 - Serverless 
+
+Presentation
+
+Show dif mem usage startup time 
+- use https://visualvm.github.io/ for memory usage
