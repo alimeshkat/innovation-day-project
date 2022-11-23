@@ -1,8 +1,8 @@
 # innovation-day-project
 
 Prerequisites:
-Install Java 17
-Install GraalVM
+- Install Java 17
+- Install GraalVM
 
 
 What to make:
