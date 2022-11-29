@@ -1,13 +1,11 @@
-package nl.rabobank.innonative;
+package nl.rabobank.innonative
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.SpringApplication
+import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-public class InnonativeApplication {
+class InnonativeApplication
 
-	public static void main(String[] args) {
-		SpringApplication.run(InnonativeApplication.class, args);
-	}
-
+fun main(args: Array<String>) {
+    SpringApplication.run(InnonativeApplication::class.java, *args)
 }

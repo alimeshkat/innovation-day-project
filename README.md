@@ -18,3 +18,17 @@ Presentation:
 
 Show dif mem usage startup time 
 - use https://visualvm.github.io/ for memory usage
+
+
+---
+
+## Install guide
+
+With docker.
+```shell
+mvn -Pnative spring-boot:build-image
+```
+Without docker. Follow the guide [here](https://docs.spring.io/spring-boot/docs/3.0.0/reference/html/native-image.html#native-image.developing-your-first-application.native-build-tools.prerequisites) to install GraalVm tool and native image build tool.
+```shell
+mvn -Pnative native:compile
+```
